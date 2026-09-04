@@ -200,6 +200,9 @@ position = Vector2(112, 38)
 [node name="Enemy2" parent="playerAndDeco/Enemies" unique_id=201070464 instance=ExtResource("5_5iwry")]
 position = Vector2(227, 192)
 
+[node name="Enemy4" parent="playerAndDeco/Enemies" unique_id=314088932 instance=ExtResource("5_5iwry")]
+position = Vector2(-41, 66)
+
 [node name="Enemy3" parent="playerAndDeco/Enemies" unique_id=1683385826 instance=ExtResource("5_5iwry")]
 position = Vector2(275, 89)
 

@@ -113,6 +113,9 @@ position = Vector2(696, 96)
 [node name="Enemy4" parent="Enemies" unique_id=1935803220 instance=ExtResource("7_k3ca3")]
 position = Vector2(645, 217)
 
+[node name="Enemy5" parent="Enemies" unique_id=52286629 instance=ExtResource("7_k3ca3")]
+position = Vector2(562, 364)
+
 [node name="Fog" parent="." unique_id=922521408 instance=ExtResource("8_a7tnx")]
 scale = Vector2(1.8, 1.8)
 transform = Transform2D(1.8, 0, 0, 1.8, 0, 0)
