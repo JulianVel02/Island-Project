@@ -1,0 +1,85 @@
+[gd_resource type="TileSet" format=3 uid="uid://d2x2ryb15ea7n"]
+
+[ext_resource type="Texture2D" uid="uid://cms7yrtucgta" path="res://Assets/alternativeAssets/Tilesets/dungeon/Acid.png" id="1_i1rnn"]
+[ext_resource type="Texture2D" uid="uid://dt2j6wfgmwsmt" path="res://Assets/alternativeAssets/Tilesets/dungeon/Pit.png" id="2_p4onp"]
+[ext_resource type="Texture2D" uid="uid://crl2q6cy4gssb" path="res://Assets/alternativeAssets/Tilesets/dungeon/Water.png" id="3_4tekn"]
+[ext_resource type="Texture2D" uid="uid://tkgsutqaoc6p" path="res://Assets/alternativeAssets/Other/Misc/Sheets/misc_props_sheet.png" id="4_l86c4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wp1y"]
+texture = ExtResource("1_i1rnn")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwdkc"]
+texture = ExtResource("2_p4onp")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxiwp"]
+texture = ExtResource("3_4tekn")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_owv2g"]
+texture = ExtResource("4_l86c4")
+texture_region_size = Vector2i(18, 16)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_3wp1y")
+sources/1 = SubResource("TileSetAtlasSource_bwdkc")
+sources/2 = SubResource("TileSetAtlasSource_dxiwp")
+sources/4 = SubResource("TileSetAtlasSource_owv2g")
