@@ -1,0 +1,37 @@
+[gd_resource type="TileSet" format=3 uid="uid://cjfr0ib1bmadc"]
+
+[ext_resource type="Texture2D" uid="uid://bdtr1888w12tm" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Desert_old_style_16x16.png" id="1_tqeaj"]
+[ext_resource type="Texture2D" uid="uid://bql08lokueruc" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Fall_old_style_16x16.png" id="2_8du3i"]
+[ext_resource type="Texture2D" uid="uid://dh18b5v1kduwc" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Grassland_old_style_16x16.png" id="3_dgxbs"]
+[ext_resource type="Texture2D" uid="uid://6id64u36iuit" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Original_Color_old_style_16x16.png" id="4_8i54f"]
+[ext_resource type="Texture2D" uid="uid://bthmldpbooppj" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Winter_old_style_16x16.png" id="5_1hruo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ex6r"]
+texture = ExtResource("1_tqeaj")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6whgp"]
+texture = ExtResource("2_8du3i")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6vxl"]
+texture = ExtResource("3_dgxbs")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rkhgj"]
+texture = ExtResource("4_8i54f")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h05l0"]
+texture = ExtResource("5_1hruo")
+
+[resource]
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "path"
+terrain_set_0/terrain_0/color = Color(0.5019608, 0.47058824, 1, 1)
+terrain_set_0/terrain_1/name = "ground"
+terrain_set_0/terrain_1/color = Color(1, 0, 0.9843137, 1)
+terrain_set_0/terrain_2/name = "path 2"
+terrain_set_0/terrain_2/color = Color(0.47058824, 0.99607843, 0.2509804, 1)
+sources/10 = SubResource("TileSetAtlasSource_4ex6r")
+sources/11 = SubResource("TileSetAtlasSource_6whgp")
+sources/12 = SubResource("TileSetAtlasSource_a6vxl")
+sources/13 = SubResource("TileSetAtlasSource_rkhgj")
+sources/14 = SubResource("TileSetAtlasSource_h05l0")
