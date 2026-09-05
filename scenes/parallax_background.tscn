@@ -28,4 +28,3 @@ motion_mirroring = Vector2(320, 180)
 material = SubResource("ShaderMaterial_a07sb")
 offset_right = 320.0
 offset_bottom = 180.0
-color = Color(0, 0.9173618, 0.5862638, 1)

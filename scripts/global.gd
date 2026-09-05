@@ -10,4 +10,6 @@ signal npc_interacted(npc_name: String, text: String)
 
 var dialogue_open: bool = false
 var player_current_attack = false
+var keys_collected: int = 0
+
 var next_spawn_posiion := Vector2.ZERO
