@@ -5,16 +5,28 @@
 [ext_resource type="Texture2D" uid="uid://djswjvoc846w7" path="res://Assets/alternativeAssets/Character/Char_two/Attack/Sword/Char2_attack_right.png" id="2_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://crmmevg8a4p8u" path="res://Assets/alternativeAssets/Character/Char_two/Attack/Sword/Char2_atk_up.png" id="3_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://ccdcen3fgictr" path="res://Assets/alternativeAssets/Character/Char_two/Idle/Char2_idle_down.png" id="4_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://237ramq2gy8v" path="res://Assets/alternativeAssets/UI/Containers/TalkBox_Brown_16x16.png" id="4_a8ls1"]
+[ext_resource type="Script" uid="uid://c8q7wyjybbn07" path="res://scripts/dialogue_box.gd" id="4_oprun"]
 [ext_resource type="Texture2D" uid="uid://blrhs13e0r3gu" path="res://Assets/alternativeAssets/Character/Char_two/Idle/Char2_idle_right.png" id="5_jej6c"]
 [ext_resource type="Texture2D" uid="uid://bwaly0jounbmn" path="res://Assets/alternativeAssets/Character/Char_two/Idle/Char2_idle_up.png" id="6_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://drjfnius1jcxv" path="res://Assets/alternativeAssets/Character/Char_two/Walk/Char2_walk_down.png" id="7_oprun"]
 [ext_resource type="Texture2D" uid="uid://c03ksnx5lh4x0" path="res://Assets/alternativeAssets/Character/Char_two/Walk/Char2_walk_right.png" id="8_a8ls1"]
-[ext_resource type="Texture2D" uid="uid://d3k0pb7ig2xwy" path="res://Assets/alternativeAssets/Character/Char_two/Char2_pick_item.png" id="8_oprun"]
 [ext_resource type="Texture2D" uid="uid://drrjggj0b53be" path="res://Assets/alternativeAssets/Character/Char_two/Walk/Char2_walk_up.png" id="9_qfm1y"]
 [ext_resource type="Script" uid="uid://tm3cv2g4omu8" path="res://scripts/camera_shake.gd" id="11_3v2ag"]
 [ext_resource type="AudioStream" uid="uid://b8aevtu0rjqko" path="res://Assets/sounds/hurt.wav" id="11_d2wvv"]
-[ext_resource type="Texture2D" uid="uid://b2n58n7nylruu" path="res://Assets/alternativeAssets/UI/LifeBars/Angle_Down_LBs_4x8.png" id="13_f1ej7"]
-[ext_resource type="Script" uid="uid://wars8ce3rl6y" path="res://scripts/life_bar.gd" id="14_oprun"]
+[ext_resource type="Texture2D" uid="uid://c0uromxkgip14" path="res://Assets/alternativeAssets/UI/LifeBars/MyLifeBar/vida_vacia.png" id="13_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://c6f2epn6es21f" path="res://Assets/alternativeAssets/UI/LifeBars/MyLifeBar/vida_llena.png" id="14_oprun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0em8"]
+texture = ExtResource("4_a8ls1")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
 atlas = ExtResource("1_ur7pv")
@@ -159,10 +171,6 @@ region = Rect2(64, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxlsd"]
 atlas = ExtResource("6_f1ej7")
 region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
-atlas = ExtResource("8_oprun")
-region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ha2mi"]
 atlas = ExtResource("7_oprun")
@@ -378,14 +386,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a8ls1")
-}],
-"loop": 0,
-"name": &"pick_up",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ha2mi")
 }, {
 "duration": 1.0,
@@ -461,28 +461,53 @@ height = 7.999995
 [sub_resource type="CircleShape2D" id="CircleShape2D_v5m8h"]
 radius = 12.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qwwd2"]
-atlas = ExtResource("13_f1ej7")
-region = Rect2(16, 108, 12, 4)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nkuye"]
-atlas = ExtResource("13_f1ej7")
-region = Rect2(0, 108, 12, 4)
-
 [node name="Player" type="CharacterBody2D" unique_id=217914050]
 y_sort_enabled = true
 collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_y4r1p")
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=1396299660]
+
+[node name="life_bar" type="TextureProgressBar" parent="UI" unique_id=533200548]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 28.0
+scale = Vector2(4, 4)
+max_value = 150.0
+value = 150.0
+texture_under = ExtResource("13_f1ej7")
+texture_progress = ExtResource("14_oprun")
+
+[node name="dialogue_box" type="Panel" parent="UI" unique_id=1380923098]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -560.0
+offset_top = -88.0
+offset_right = -160.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p0em8")
+script = ExtResource("4_oprun")
+
+[node name="dialogue_label" type="Label" parent="UI/dialogue_box" unique_id=586190785]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=886140379]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_v5m8h")
-animation = &"pick_up"
+animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 1.0
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=1272566381]
 y_sort_enabled = true
@@ -519,22 +544,8 @@ stream = ExtResource("11_d2wvv")
 volume_db = -15.13
 pitch_scale = 0.85
 
-[node name="life_bar" type="TextureProgressBar" parent="." unique_id=1261967508]
-offset_left = -6.0
-offset_top = -20.0
-offset_right = 6.0
-offset_bottom = -16.0
-texture_under = SubResource("AtlasTexture_qwwd2")
-texture_progress = SubResource("AtlasTexture_nkuye")
-script = ExtResource("14_oprun")
-
-[node name="hide_timer" type="Timer" parent="life_bar" unique_id=1930434526]
-wait_time = 2.0
-one_shot = true
-
 [connection signal="animation_finished" from="sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="body_entered" from="player_hitbow" to="." method="_on_player_hitbow_body_entered"]
 [connection signal="body_exited" from="player_hitbow" to="." method="_on_player_hitbow_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
-[connection signal="timeout" from="life_bar/hide_timer" to="life_bar" method="_on_hide_timer_timeout"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dopu6nsd086uj" path="res://Assets/alternativeAssets/UI/Icons/Item_Icons_16x16.png" id="1_exkpi"]
 [ext_resource type="Script" uid="uid://c7sufnj100iq4" path="res://scripts/key_item.gd" id="1_js8n2"]
+[ext_resource type="AudioStream" uid="uid://dj2u3bv27a8aq" path="res://Assets/sounds/coin.wav" id="3_obpqi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yxv17"]
 radius = 8.0
@@ -17,5 +18,10 @@ region_rect = Rect2(0, 184, 16, 8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686691630]
 position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_yxv17")
+
+[node name="Sound_key" type="AudioStreamPlayer2D" parent="." unique_id=1849780181]
+stream = ExtResource("3_obpqi")
+volume_db = -14.0
+pitch_scale = 0.65
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

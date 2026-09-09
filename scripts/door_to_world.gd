@@ -18,7 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 			# La posición del jugador en el mundo justo antes de tocar el area door.
 			
 		if requires_keys and Global.keys_collected < keys_needed:
-			print("Faltan llaves!")
+			Global.npc_interacted.emit("Puerta", "Te faltan llaves (" + str(Global.keys_collected) + "/" + str(keys_needed) + ")")
 		else:
 			get_tree().call_deferred("change_scene_to_file", target_scene)
 		# get_tree da acceso al arbol completo de nodos en la escena cargada

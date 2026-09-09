@@ -5,7 +5,8 @@ const SPEED = 80.0
 @onready var sprite: AnimatedSprite2D = $sprite
 @onready var hit: AudioStreamPlayer2D = $hit
 @onready var shake_camera: Camera2D = $camera2d
-@onready var health_bar: TextureProgressBar = $UI/life_bar
+@onready var life_bar: TextureProgressBar = $life_bar
+
 
 var last_direction := "down"
 var is_attacking := false
@@ -14,9 +15,12 @@ var enemy_attack_cooldown = true
 var health = 150
 var player_alive = true
 
-
 var attack_ip = false
 # ip: in progress
+
+var knockback: Vector2 = Vector2.ZERO
+var knockback_timer: float = 0.0
+
 
 func _ready() -> void:
 	Global.player_hit_enemy.connect(shake_camera.trigger_shake)
@@ -39,11 +43,18 @@ func _physics_process(delta: float) -> void:
 		print("Jugador eliminado!")
 		self.queue_free()
 	
-	health_bar.value = health
 
 	if Input.is_action_just_pressed("attack_space") and not is_attacking:
 		start_attack()
 		hit.play()
+		
+	if knockback_timer > 0:
+		velocity = knockback
+		knockback_timer -= delta
+		if knockback_timer <= 0.0:
+			knockback = Vector2.ZERO
+		move_and_slide()
+		return
 		
 	if is_attacking:
 		# Mientras ataca no se mueve, salimos rapido de la funcion
@@ -77,6 +88,7 @@ func update_facing(direction: Vector2) -> void:
 		else:
 			last_direction = "up"
 
+
 func play_animation(prefix: String) -> void:
 	if last_direction == "left" or last_direction == "right":
 		sprite.flip_h = last_direction == "left"
@@ -91,6 +103,7 @@ func start_attack() -> void:
 	Global.player_current_attack = true
 	play_animation("attack")
 	$deal_attack_timer.start()
+
 
 
 func _on_sprite_animation_finished() -> void:
@@ -111,8 +124,8 @@ func _on_player_hitbow_body_exited(body: Node2D) -> void:
 
 func enemy_attack():
 	if enemy_in_attack_range and enemy_attack_cooldown == true:
-		#shake_camera.trigger_shake() se elimina esta linea
 		health = health - 10
+		life_bar.update_health(health, 150)
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
 		print(health)
@@ -125,3 +138,7 @@ func _on_attack_cooldown_timeout() -> void:
 func _on_deal_attack_timer_timeout() -> void:
 	attack_ip = false
 	Global.player_current_attack = false
+	
+func apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
+	knockback = direction * force
+	knockback_timer = knockback_duration

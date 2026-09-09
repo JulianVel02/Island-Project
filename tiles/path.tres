@@ -1,13 +1,13 @@
-[gd_resource type="TileSet" format=3 uid="uid://bv0fs8sn0i5m5"]
+[gd_resource type="TileSet" format=3 uid="uid://c5yvya04lvadb"]
 
-[ext_resource type="Texture2D" uid="uid://fv7i3mmkyhm2" path="res://Assets/alternativeAssets/Tilesets/TS_Water.png" id="1_k2yq5"]
-[ext_resource type="Texture2D" uid="uid://cnsj1evgtjwvm" path="res://Assets/alternativeAssets/Tilesets/TS_Dirt.png" id="3_03cev"]
-[ext_resource type="Texture2D" uid="uid://dh18b5v1kduwc" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Grassland_old_style_16x16.png" id="4_k2yq5"]
-[ext_resource type="Texture2D" uid="uid://6id64u36iuit" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Original_Color_old_style_16x16.png" id="5_oft6y"]
-[ext_resource type="Texture2D" uid="uid://bdtr1888w12tm" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Desert_old_style_16x16.png" id="6_oft6y"]
+[ext_resource type="Texture2D" uid="uid://fv7i3mmkyhm2" path="res://Assets/alternativeAssets/Tilesets/TS_Water.png" id="1_2nb8a"]
+[ext_resource type="Texture2D" uid="uid://cnsj1evgtjwvm" path="res://Assets/alternativeAssets/Tilesets/TS_Dirt.png" id="3_jinwr"]
+[ext_resource type="Texture2D" uid="uid://6id64u36iuit" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Original_Color_old_style_16x16.png" id="5_2nb8a"]
+[ext_resource type="Texture2D" uid="uid://dh18b5v1kduwc" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Grassland_old_style_16x16.png" id="5_6ecxb"]
+[ext_resource type="Texture2D" uid="uid://bdtr1888w12tm" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Desert_old_style_16x16.png" id="6_em60m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1e0d"]
-texture = ExtResource("1_k2yq5")
+texture = ExtResource("1_2nb8a")
 1:0/0 = 0
 2:0/0 = 0
 2:0/0/terrain_set = 0
@@ -105,7 +105,7 @@ texture = ExtResource("1_k2yq5")
 0:3/0/terrains_peering_bit/top_left_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5y222"]
-texture = ExtResource("3_03cev")
+texture = ExtResource("3_jinwr")
 0:1/0 = 0
 0:1/0/terrain_set = 0
 1:1/0 = 0
@@ -143,7 +143,7 @@ texture = ExtResource("3_03cev")
 4:3/0/terrain_set = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03cev"]
-texture = ExtResource("6_oft6y")
+texture = ExtResource("6_em60m")
 1:0/0 = 0
 1:0/0/terrain_set = 0
 2:0/0 = 0
@@ -331,7 +331,7 @@ texture = ExtResource("6_oft6y")
 4:12/0/terrain_set = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2nb8a"]
-texture = ExtResource("4_k2yq5")
+texture = ExtResource("5_6ecxb")
 1:0/0 = 0
 1:0/0/terrain_set = 0
 2:0/0 = 0
@@ -503,7 +503,7 @@ texture = ExtResource("4_k2yq5")
 4:12/0/terrain_set = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvpod"]
-texture = ExtResource("5_oft6y")
+texture = ExtResource("5_2nb8a")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0

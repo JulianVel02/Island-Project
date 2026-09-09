@@ -1,13 +1,24 @@
 [gd_scene format=3 uid="uid://my4rvwsu4phj"]
 
 [ext_resource type="Script" uid="uid://kn2le8hof8m1" path="res://scripts/enemy.gd" id="1_hb8ge"]
-[ext_resource type="Texture2D" uid="uid://bctmfglp67h3y" path="res://assets/alternativeAssets/Enemies/Skeleton/dying/dying_skel-Sheet.png" id="1_iifgy"]
-[ext_resource type="Texture2D" uid="uid://dngae02awsn0b" path="res://assets/alternativeAssets/Enemies/Skeleton/Idle/Skel_idle_down.png" id="2_epg4t"]
-[ext_resource type="Texture2D" uid="uid://c1s82dfbyotuv" path="res://assets/alternativeAssets/Enemies/Skeleton/Idle/Skel_idle_right.png" id="3_3yqyl"]
-[ext_resource type="Texture2D" uid="uid://dj8amqd33aoyc" path="res://assets/alternativeAssets/Enemies/Skeleton/Idle/Skel_idle_up.png" id="4_wujgv"]
-[ext_resource type="Texture2D" uid="uid://bvbo7t6wk3bxt" path="res://assets/alternativeAssets/Enemies/Skeleton/Walk/Skel_walk_down.png" id="5_epg4t"]
-[ext_resource type="Texture2D" uid="uid://cm0q4a5hdf2gc" path="res://assets/alternativeAssets/Enemies/Skeleton/Walk/Skel_walk_right.png" id="6_wujgv"]
-[ext_resource type="Texture2D" uid="uid://bn4pw1qo3y76v" path="res://assets/alternativeAssets/Enemies/Skeleton/Walk/Skel_walk_up.png" id="7_hb8ge"]
+[ext_resource type="Texture2D" uid="uid://bctmfglp67h3y" path="res://Assets/alternativeAssets/Enemies/Skeleton/dying/dying_skel-Sheet.png" id="1_iifgy"]
+[ext_resource type="Texture2D" uid="uid://dngae02awsn0b" path="res://Assets/alternativeAssets/Enemies/Skeleton/Idle/Skel_idle_down.png" id="2_epg4t"]
+[ext_resource type="Texture2D" uid="uid://c1s82dfbyotuv" path="res://Assets/alternativeAssets/Enemies/Skeleton/Idle/Skel_idle_right.png" id="3_3yqyl"]
+[ext_resource type="Texture2D" uid="uid://dj8amqd33aoyc" path="res://Assets/alternativeAssets/Enemies/Skeleton/Idle/Skel_idle_up.png" id="4_wujgv"]
+[ext_resource type="Texture2D" uid="uid://bvbo7t6wk3bxt" path="res://Assets/alternativeAssets/Enemies/Skeleton/Walk/Skel_walk_down.png" id="5_epg4t"]
+[ext_resource type="Texture2D" uid="uid://cm0q4a5hdf2gc" path="res://Assets/alternativeAssets/Enemies/Skeleton/Walk/Skel_walk_right.png" id="6_wujgv"]
+[ext_resource type="Texture2D" uid="uid://bn4pw1qo3y76v" path="res://Assets/alternativeAssets/Enemies/Skeleton/Walk/Skel_walk_up.png" id="7_hb8ge"]
+[ext_resource type="Texture2D" uid="uid://b2n58n7nylruu" path="res://Assets/alternativeAssets/UI/LifeBars/Angle_Down_LBs_4x8.png" id="9_8qclf"]
+[ext_resource type="Script" uid="uid://wars8ce3rl6y" path="res://scripts/life_bar.gd" id="10_w8i8w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5m8h"]
+radius = 48.010414
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hlmh"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yxv17"]
+radius = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hb8ge"]
 atlas = ExtResource("1_iifgy")
@@ -341,24 +352,17 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_v5m8h"]
-radius = 48.010414
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwwd2"]
+atlas = ExtResource("9_8qclf")
+region = Rect2(16, 84, 12, 4)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4hlmh"]
-radius = 6.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_yxv17"]
-radius = 15.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkuye"]
+atlas = ExtResource("9_8qclf")
+region = Rect2(0, 84, 12, 4)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=98353452]
 motion_mode = 1
 script = ExtResource("1_hb8ge")
-
-[node name="sprite_skul" type="AnimatedSprite2D" parent="." unique_id=1369093960]
-sprite_frames = SubResource("SpriteFrames_v5m8h")
-animation = &"idle_down"
-autoplay = "idle_down"
-offset = Vector2(0, -6)
 
 [node name="detection_area" type="Area2D" parent="." unique_id=68471839]
 collision_layer = 2
@@ -380,9 +384,29 @@ shape = SubResource("CircleShape2D_yxv17")
 [node name="take_dmage_cooldown" type="Timer" parent="." unique_id=335041403]
 wait_time = 0.6
 
-[connection signal="animation_finished" from="sprite_skul" to="." method="_on_sprite_skul_animation_finished"]
+[node name="sprite_skul" type="AnimatedSprite2D" parent="." unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_v5m8h")
+animation = &"idle_down"
+autoplay = "idle_down"
+offset = Vector2(0, -6)
+
+[node name="life_bar" type="TextureProgressBar" parent="." unique_id=1261967508]
+offset_left = -6.0
+offset_top = -20.0
+offset_right = 7.0
+offset_bottom = -16.0
+texture_under = SubResource("AtlasTexture_qwwd2")
+texture_progress = SubResource("AtlasTexture_nkuye")
+script = ExtResource("10_w8i8w")
+
+[node name="hide_timer" type="Timer" parent="life_bar" unique_id=1930434526]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
 [connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
 [connection signal="timeout" from="take_dmage_cooldown" to="." method="_on_take_dmage_cooldown_timeout"]
+[connection signal="animation_finished" from="sprite_skul" to="." method="_on_sprite_skul_animation_finished"]
+[connection signal="timeout" from="life_bar/hide_timer" to="life_bar" method="_on_hide_timer_timeout"]

@@ -4,11 +4,246 @@
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="4_ijiap"]
 [ext_resource type="TileSet" uid="uid://d2x2ryb15ea7n" path="res://tiles/deco_cave.tres" id="5_vbsv0"]
 [ext_resource type="Script" uid="uid://bp0rtpgdaj4fn" path="res://scripts/door_to_world.gd" id="6_gisvb"]
+[ext_resource type="Texture2D" uid="uid://bo4odrx5th0rs" path="res://Assets/alternativeAssets/Tilesets/Biomes/Monsters/Santa_goblin.png" id="6_yyqhu"]
 [ext_resource type="PackedScene" uid="uid://my4rvwsu4phj" path="res://scenes/enemy.tscn" id="7_k3ca3"]
 [ext_resource type="PackedScene" uid="uid://bvasfdix18uuw" path="res://scenes/parallax_background.tscn" id="8_a7tnx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5m8h"]
 size = Vector2(31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mje7w"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(208, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lomqd"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(224, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ddcw"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(240, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijiap"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(256, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbsv0"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gisvb"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3ca3"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7tnx"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lork7"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttsqd"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibkgu"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nff7f"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwywo"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nuro"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3vjn"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw2bp"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlqk6"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kdsj"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8gb2"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ilv6"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgumx"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ahuk"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40xpc"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(96, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkvca"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(112, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifnxq"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_665aw"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iunej"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_058pl"]
+atlas = ExtResource("6_yyqhu")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqcdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mje7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lomqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ddcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijiap")
+}],
+"loop": 0,
+"name": &"dying",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbsv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gisvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3ca3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7tnx")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lork7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttsqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibkgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nff7f")
+}],
+"loop": 0,
+"name": &"idle_side",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwywo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nuro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3vjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw2bp")
+}],
+"loop": 0,
+"name": &"idle_up",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlqk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kdsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8gb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ilv6")
+}],
+"loop": 0,
+"name": &"walk_down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgumx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ahuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40xpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkvca")
+}],
+"loop": 0,
+"name": &"walk_side",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifnxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_665aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iunej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_058pl")
+}],
+"loop": 0,
+"name": &"walk_up",
+"speed": 5.0
+}]
 
 [node name="island_2" type="Node2D" unique_id=1699445149]
 
@@ -50,23 +285,39 @@ shape = SubResource("RectangleShape2D_v5m8h")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=94192723]
 
-[node name="Enemy" parent="Enemies" unique_id=98353452 instance=ExtResource("7_k3ca3")]
-position = Vector2(-69, 273)
+[node name="Goblin_santa" parent="Enemies" unique_id=52286629 instance=ExtResource("7_k3ca3")]
+position = Vector2(601, 163)
 
-[node name="Enemy2" parent="Enemies" unique_id=735616197 instance=ExtResource("7_k3ca3")]
-position = Vector2(-53, 169)
+[node name="sprite_skul" parent="Enemies/Goblin_santa" index="0" unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_yqcdc")
 
-[node name="Enemy3" parent="Enemies" unique_id=491824781 instance=ExtResource("7_k3ca3")]
-position = Vector2(-195, 166)
+[node name="CollisionShape2D" parent="Enemies/Goblin_santa/detection_area" parent_id_path=PackedInt32Array(52286629, 68471839) index="0" unique_id=120012433]
+scale = Vector2(1.4117532, 1.4117532)
 
-[node name="Enemy4" parent="Enemies" unique_id=1935803220 instance=ExtResource("7_k3ca3")]
-position = Vector2(-195, 277)
+[node name="Goblin_santa2" parent="Enemies" unique_id=98353452 instance=ExtResource("7_k3ca3")]
+position = Vector2(440, 108)
 
-[node name="Enemy5" parent="Enemies" unique_id=52286629 instance=ExtResource("7_k3ca3")]
-position = Vector2(-137, 370)
+[node name="sprite_skul" parent="Enemies/Goblin_santa2" index="0" unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_yqcdc")
+
+[node name="CollisionShape2D" parent="Enemies/Goblin_santa2/detection_area" parent_id_path=PackedInt32Array(98353452, 68471839) index="0" unique_id=120012433]
+scale = Vector2(1.4982123, 1.4982123)
+
+[node name="Goblin_santa3" parent="Enemies" unique_id=312312991 instance=ExtResource("7_k3ca3")]
+position = Vector2(829, 161)
+
+[node name="sprite_skul" parent="Enemies/Goblin_santa3" index="0" unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_yqcdc")
+
+[node name="CollisionShape2D" parent="Enemies/Goblin_santa3/detection_area" parent_id_path=PackedInt32Array(312312991, 68471839) index="0" unique_id=120012433]
+scale = Vector2(1.5439744, 1.5439744)
 
 [node name="Fog" parent="." unique_id=922521408 instance=ExtResource("8_a7tnx")]
 scale = Vector2(1.8, 1.8)
 transform = Transform2D(1.8, 0, 0, 1.8, 0, 0)
 
 [connection signal="body_entered" from="Door2/door_to_world" to="Door2/door_to_world" method="_on_body_entered"]
+
+[editable path="Enemies/Goblin_santa"]
+[editable path="Enemies/Goblin_santa2"]
+[editable path="Enemies/Goblin_santa3"]

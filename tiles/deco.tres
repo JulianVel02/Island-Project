@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://mmvwsaae6wod" path="res://Assets/alternativeAssets/Tilesets/Biomes/Misc/Cactus.png" id="5_7md0u"]
 [ext_resource type="Texture2D" uid="uid://jdyf164tkqvt" path="res://Assets/alternativeAssets/Tilesets/Biomes/Misc/Desert_decoration.png" id="6_p6tin"]
 [ext_resource type="Texture2D" uid="uid://d1dsxks5mgk3i" path="res://Assets/alternativeAssets/Tilesets/Biomes/Misc/Mooshrooms.png" id="7_112f3"]
+[ext_resource type="Texture2D" uid="uid://d0530nh0wo566" path="res://Assets/alternativeAssets/Tilesets/Biomes/Tilesets/Old Style/Decoration tiles/Original_color_decoration_16x16.png" id="8_7md0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esrgy"]
 texture = ExtResource("1_2cxpy")
@@ -166,6 +167,63 @@ texture = ExtResource("7_112f3")
 1:4/0 = 0
 2:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6tin"]
+texture = ExtResource("8_7md0u")
+0:0/0 = 0
+0:0/0/y_sort_origin = -7
+1:0/0 = 0
+1:0/0/y_sort_origin = -7
+2:0/0 = 0
+2:0/0/y_sort_origin = -7
+0:1/0 = 0
+0:1/0/y_sort_origin = -7
+1:1/0 = 0
+1:1/0/y_sort_origin = -7
+2:1/0 = 0
+2:1/0/y_sort_origin = -7
+0:2/0 = 0
+0:2/0/y_sort_origin = -7
+1:2/0 = 0
+1:2/0/y_sort_origin = -7
+2:2/0 = 0
+2:2/0/y_sort_origin = -7
+0:3/0 = 0
+0:3/0/y_sort_origin = -7
+1:3/0 = 0
+1:3/0/y_sort_origin = -7
+2:3/0 = 0
+2:3/0/y_sort_origin = -7
+0:4/0 = 0
+0:4/0/y_sort_origin = -7
+1:4/0 = 0
+1:4/0/y_sort_origin = -7
+2:4/0 = 0
+2:4/0/y_sort_origin = -7
+0:5/0 = 0
+0:5/0/y_sort_origin = -7
+1:5/0 = 0
+1:5/0/y_sort_origin = -7
+2:5/0 = 0
+2:5/0/y_sort_origin = -7
+0:6/0 = 0
+0:6/0/y_sort_origin = -7
+1:6/0 = 0
+1:6/0/y_sort_origin = -7
+2:6/0 = 0
+2:6/0/y_sort_origin = -7
+0:7/0 = 0
+0:7/0/y_sort_origin = -7
+1:7/0 = 0
+1:7/0/y_sort_origin = -7
+2:7/0 = 0
+2:7/0/y_sort_origin = -7
+0:8/0 = 0
+0:8/0/y_sort_origin = -7
+1:8/0 = 0
+1:8/0/y_sort_origin = -7
+2:8/0 = 0
+2:8/0/y_sort_origin = -7
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/11 = SubResource("TileSetAtlasSource_qgm56")
@@ -175,3 +233,4 @@ sources/1 = SubResource("TileSetAtlasSource_76yj3")
 sources/2 = SubResource("TileSetAtlasSource_6sc0a")
 sources/3 = SubResource("TileSetAtlasSource_yhabv")
 sources/4 = SubResource("TileSetAtlasSource_xvu0i")
+sources/5 = SubResource("TileSetAtlasSource_p6tin")

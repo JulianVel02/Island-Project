@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tiny (Copy)"
-run/main_scene="uid://eibv4e7k8f0p"
+run/main_scene="uid://badunq6tre5ch"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

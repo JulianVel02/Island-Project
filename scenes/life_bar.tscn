@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dupkhsc6i6w43"]
+
+[ext_resource type="Texture2D" uid="uid://b2n58n7nylruu" path="res://Assets/alternativeAssets/UI/LifeBars/Angle_Down_LBs_4x8.png" id="1_thdg0"]
+[ext_resource type="Script" uid="uid://wars8ce3rl6y" path="res://scripts/life_bar.gd" id="2_nkuye"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwwd2"]
+atlas = ExtResource("1_thdg0")
+region = Rect2(16, 108, 12, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkuye"]
+atlas = ExtResource("1_thdg0")
+region = Rect2(0, 108, 12, 4)
+
+[node name="life_bar" type="TextureProgressBar" unique_id=1261967508]
+offset_right = 12.0
+offset_bottom = 4.0
+texture_under = SubResource("AtlasTexture_qwwd2")
+texture_progress = SubResource("AtlasTexture_nkuye")
+script = ExtResource("2_nkuye")
+
+[node name="hide_timer" type="Timer" parent="." unique_id=1930434526]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="hide_timer" to="." method="_on_hide_timer_timeout"]
