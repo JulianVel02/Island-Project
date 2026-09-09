@@ -268,6 +268,7 @@ position = Vector2(885, 17)
 [node name="deco" type="TileMapLayer" parent="Player&Deco" unique_id=1891129784]
 z_index = 1
 y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAlAAgAAwAAAAAAAAAuAAMAAwAAAAAAAAAsAA0AAwAAAAAAAAA/AAMAAwABAAAAAABAABAAAwABAAAAAAA/ABAAAwACAAAAAAA1ABEAAwABAAAAAAA2ABEAAwADAAAAAAAmAAgAAwACAAEAAAAuAAQAAwACAAIAAAA1AP//AwAAAAEAAAA4AP//AwABAAEAAAA4AAAAAwABAAEAAAA1AAAAAwAAAAEAAAA7AP//AwABAAAAAAA7AAAAAwADAAAAAAA=")
 tile_set = ExtResource("5_vbsv0")
 
 [node name="Door2" type="Node2D" parent="." unique_id=1781887918]
@@ -288,29 +289,29 @@ shape = SubResource("RectangleShape2D_v5m8h")
 [node name="Goblin_santa" parent="Enemies" unique_id=52286629 instance=ExtResource("7_k3ca3")]
 position = Vector2(601, 163)
 
-[node name="sprite_skul" parent="Enemies/Goblin_santa" index="0" unique_id=1369093960]
-sprite_frames = SubResource("SpriteFrames_yqcdc")
-
 [node name="CollisionShape2D" parent="Enemies/Goblin_santa/detection_area" parent_id_path=PackedInt32Array(52286629, 68471839) index="0" unique_id=120012433]
 scale = Vector2(1.4117532, 1.4117532)
+
+[node name="sprite_skul" parent="Enemies/Goblin_santa" index="4" unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_yqcdc")
 
 [node name="Goblin_santa2" parent="Enemies" unique_id=98353452 instance=ExtResource("7_k3ca3")]
 position = Vector2(440, 108)
 
-[node name="sprite_skul" parent="Enemies/Goblin_santa2" index="0" unique_id=1369093960]
-sprite_frames = SubResource("SpriteFrames_yqcdc")
-
 [node name="CollisionShape2D" parent="Enemies/Goblin_santa2/detection_area" parent_id_path=PackedInt32Array(98353452, 68471839) index="0" unique_id=120012433]
 scale = Vector2(1.4982123, 1.4982123)
+
+[node name="sprite_skul" parent="Enemies/Goblin_santa2" index="4" unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_yqcdc")
 
 [node name="Goblin_santa3" parent="Enemies" unique_id=312312991 instance=ExtResource("7_k3ca3")]
 position = Vector2(829, 161)
 
-[node name="sprite_skul" parent="Enemies/Goblin_santa3" index="0" unique_id=1369093960]
-sprite_frames = SubResource("SpriteFrames_yqcdc")
-
 [node name="CollisionShape2D" parent="Enemies/Goblin_santa3/detection_area" parent_id_path=PackedInt32Array(312312991, 68471839) index="0" unique_id=120012433]
 scale = Vector2(1.5439744, 1.5439744)
+
+[node name="sprite_skul" parent="Enemies/Goblin_santa3" index="4" unique_id=1369093960]
+sprite_frames = SubResource("SpriteFrames_yqcdc")
 
 [node name="Fog" parent="." unique_id=922521408 instance=ExtResource("8_a7tnx")]
 scale = Vector2(1.8, 1.8)
